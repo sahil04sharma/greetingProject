@@ -5,7 +5,7 @@ function App() {
     const [message, setMessage] = useState("");
 
     const fetchGreeting = async () => {
-        const res = await fetch(`http://localhost:5000/api/greet?name=${name}`);
+        const res = await fetch(`https://greetingproject.onrender.com/api/greet?name=${name}`);
         const data = await res.json();
         setMessage(data.message || data.error);
         setName("");
